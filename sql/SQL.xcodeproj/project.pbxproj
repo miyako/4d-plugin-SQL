@@ -1,0 +1,767 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18B684F706944F2000CC6A1E /* 4DPluginAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B684F006944F2000CC6A1E /* 4DPluginAPI.h */; };
+		18B684F806944F2000CC6A1E /* EntryPoints.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B684F106944F2000CC6A1E /* EntryPoints.h */; };
+		18B684F906944F2000CC6A1E /* Flags.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B684F206944F2000CC6A1E /* Flags.h */; };
+		18B684FA06944F2000CC6A1E /* PrivateTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B684F306944F2000CC6A1E /* PrivateTypes.h */; };
+		18B684FB06944F2000CC6A1E /* PublicTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B684F406944F2000CC6A1E /* PublicTypes.h */; };
+		18B684FF06944F8800CC6A1E /* 4DPlugin-SQL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B684FE06944F8800CC6A1E /* 4DPlugin-SQL.cpp */; };
+		8D01CCCA0486CAD60068D4B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		D11C9F672E277CDA0056C340 /* C_TEXT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D11C9F652E277CDA0056C340 /* C_TEXT.cpp */; };
+		D11C9F682E277CDA0056C340 /* C_TEXT.h in Headers */ = {isa = PBXBuildFile; fileRef = D11C9F642E277CDA0056C340 /* C_TEXT.h */; };
+		D11C9F692E277CDA0056C340 /* C_TYPES.h in Headers */ = {isa = PBXBuildFile; fileRef = D11C9F662E277CDA0056C340 /* C_TYPES.h */; };
+		D11C9F6C2E277D9E0056C340 /* 4DPlugin-JSON.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D11C9F6B2E277D9E0056C340 /* 4DPlugin-JSON.cpp */; };
+		D11C9F6D2E277D9E0056C340 /* 4DPlugin-JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = D11C9F6A2E277D9E0056C340 /* 4DPlugin-JSON.h */; };
+		D11C9F942E27803A0056C340 /* libpgcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F6E2E2780390056C340 /* libpgcommon.a */; };
+		D11C9F952E27803A0056C340 /* libncurses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F6F2E2780390056C340 /* libncurses.a */; };
+		D11C9F962E27803A0056C340 /* libsoci_sqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F702E2780390056C340 /* libsoci_sqlite3.a */; };
+		D11C9F972E27803A0056C340 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F712E2780390056C340 /* libcrypto.a */; };
+		D11C9F982E27803A0056C340 /* libecpg_compat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F722E2780390056C340 /* libecpg_compat.a */; };
+		D11C9F992E27803A0056C340 /* libform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F732E2780390056C340 /* libform.a */; };
+		D11C9F9A2E27803A0056C340 /* liblz4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F742E2780390056C340 /* liblz4.a */; };
+		D11C9F9B2E27803A0056C340 /* libncurses++.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F752E2780390056C340 /* libncurses++.a */; };
+		D11C9F9C2E27803A0056C340 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F762E2780390056C340 /* libz.a */; };
+		D11C9F9D2E27803A0056C340 /* libboost_atomic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F772E2780390056C340 /* libboost_atomic.a */; };
+		D11C9F9E2E27803A0056C340 /* libpq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F782E2780390056C340 /* libpq.a */; };
+		D11C9F9F2E27803A0056C340 /* libboost_date_time.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F792E2780390056C340 /* libboost_date_time.a */; };
+		D11C9FA02E27803A0056C340 /* libboost_wserialization.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F7A2E2780390056C340 /* libboost_wserialization.a */; };
+		D11C9FA12E27803A0056C340 /* libboost_container.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F7B2E27803A0056C340 /* libboost_container.a */; };
+		D11C9FA22E27803A0056C340 /* libpgport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F7C2E27803A0056C340 /* libpgport.a */; };
+		D11C9FA32E27803A0056C340 /* libboost_serialization.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F7D2E27803A0056C340 /* libboost_serialization.a */; };
+		D11C9FA42E27803A0056C340 /* libodbcinst.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F7E2E27803A0056C340 /* libodbcinst.a */; };
+		D11C9FA52E27803A0056C340 /* libzstd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F7F2E27803A0056C340 /* libzstd.a */; };
+		D11C9FA62E27803A0056C340 /* libmysqlclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F802E27803A0056C340 /* libmysqlclient.a */; };
+		D11C9FA72E27803A0056C340 /* libecpg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F812E27803A0056C340 /* libecpg.a */; };
+		D11C9FA82E27803A0056C340 /* libsoci_mysql.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F822E27803A0056C340 /* libsoci_mysql.a */; };
+		D11C9FA92E27803A0056C340 /* libsoci_postgresql.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F832E27803A0056C340 /* libsoci_postgresql.a */; };
+		D11C9FAA2E27803A0056C340 /* libsqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F842E27803A0056C340 /* libsqlite3.a */; };
+		D11C9FAB2E27803A0056C340 /* libjsoncpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F852E27803A0056C340 /* libjsoncpp.a */; };
+		D11C9FAC2E27803A0056C340 /* libboost_chrono.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F862E27803A0056C340 /* libboost_chrono.a */; };
+		D11C9FAD2E27803A0056C340 /* libboost_program_options.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F872E27803A0056C340 /* libboost_program_options.a */; };
+		D11C9FAE2E27803A0056C340 /* libodbc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F882E27803A0056C340 /* libodbc.a */; };
+		D11C9FAF2E27803A0056C340 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F892E27803A0056C340 /* libboost_system.a */; };
+		D11C9FB02E27803A0056C340 /* libmenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F8A2E27803A0056C340 /* libmenu.a */; };
+		D11C9FB12E27803A0056C340 /* libodbccr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F8B2E27803A0056C340 /* libodbccr.a */; };
+		D11C9FB22E27803A0056C340 /* libpgtypes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F8C2E27803A0056C340 /* libpgtypes.a */; };
+		D11C9FB32E27803A0056C340 /* libsoci_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F8D2E27803A0056C340 /* libsoci_core.a */; };
+		D11C9FB42E27803A0056C340 /* libpanel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F8E2E27803A0056C340 /* libpanel.a */; };
+		D11C9FB52E27803A0056C340 /* libboost_thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F8F2E27803A0056C340 /* libboost_thread.a */; };
+		D11C9FB62E27803A0056C340 /* libsoci_odbc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F902E27803A0056C340 /* libsoci_odbc.a */; };
+		D11C9FB72E27803A0056C340 /* libboost_graph.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F912E27803A0056C340 /* libboost_graph.a */; };
+		D11C9FB82E27803A0056C340 /* libboost_random.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F922E27803A0056C340 /* libboost_random.a */; };
+		D11C9FB92E27803A0056C340 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9F932E27803A0056C340 /* libssl.a */; };
+		D11C9FBB2E2780510056C340 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D11C9FBA2E2780510056C340 /* libiconv.tbd */; };
+		D120937F13534DCC00A72CAA /* 4DPlugin-SQL.h in Headers */ = {isa = PBXBuildFile; fileRef = D120937E13534DCC00A72CAA /* 4DPlugin-SQL.h */; };
+		D130064F12F02D9700702C0E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D130064E12F02D9700702C0E /* Cocoa.framework */; };
+		D13116A91A03ACB700DE1322 /* 4DPluginAPI.c in Sources */ = {isa = PBXBuildFile; fileRef = D13116A81A03ACB700DE1322 /* 4DPluginAPI.c */; settings = {COMPILER_FLAGS = "-Wno-multichar"; }; };
+		D134D4AC1A030BA0008D14EF /* manifest.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = D134D4A91A030B06008D14EF /* manifest.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D134D4AB1A030B7A008D14EF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				D134D4AC1A030BA0008D14EF /* manifest.json in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		189286350695AD8900B05D6E /* SQL.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQL.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		18B684F006944F2000CC6A1E /* 4DPluginAPI.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = 4DPluginAPI.h; sourceTree = "<group>"; };
+		18B684F106944F2000CC6A1E /* EntryPoints.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EntryPoints.h; sourceTree = "<group>"; };
+		18B684F206944F2000CC6A1E /* Flags.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Flags.h; sourceTree = "<group>"; };
+		18B684F306944F2000CC6A1E /* PrivateTypes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PrivateTypes.h; sourceTree = "<group>"; };
+		18B684F406944F2000CC6A1E /* PublicTypes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PublicTypes.h; sourceTree = "<group>"; };
+		18B684FE06944F8800CC6A1E /* 4DPlugin-SQL.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; path = "4DPlugin-SQL.cpp"; sourceTree = "<group>"; };
+		8D01CCD10486CAD60068D4B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D11C9F642E277CDA0056C340 /* C_TEXT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C_TEXT.h; path = "4D Plugin API/Classes/C_TEXT.h"; sourceTree = "<group>"; };
+		D11C9F652E277CDA0056C340 /* C_TEXT.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = C_TEXT.cpp; path = "4D Plugin API/Classes/C_TEXT.cpp"; sourceTree = "<group>"; };
+		D11C9F662E277CDA0056C340 /* C_TYPES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C_TYPES.h; path = "4D Plugin API/Classes/C_TYPES.h"; sourceTree = "<group>"; };
+		D11C9F6A2E277D9E0056C340 /* 4DPlugin-JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "4DPlugin-JSON.h"; path = "support/4DPlugin-JSON.h"; sourceTree = "<group>"; };
+		D11C9F6B2E277D9E0056C340 /* 4DPlugin-JSON.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = "4DPlugin-JSON.cpp"; path = "support/4DPlugin-JSON.cpp"; sourceTree = "<group>"; };
+		D11C9F6E2E2780390056C340 /* libpgcommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpgcommon.a; path = a/libpgcommon.a; sourceTree = "<group>"; };
+		D11C9F6F2E2780390056C340 /* libncurses.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libncurses.a; path = a/libncurses.a; sourceTree = "<group>"; };
+		D11C9F702E2780390056C340 /* libsoci_sqlite3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsoci_sqlite3.a; path = a/libsoci_sqlite3.a; sourceTree = "<group>"; };
+		D11C9F712E2780390056C340 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = a/libcrypto.a; sourceTree = "<group>"; };
+		D11C9F722E2780390056C340 /* libecpg_compat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libecpg_compat.a; path = a/libecpg_compat.a; sourceTree = "<group>"; };
+		D11C9F732E2780390056C340 /* libform.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libform.a; path = a/libform.a; sourceTree = "<group>"; };
+		D11C9F742E2780390056C340 /* liblz4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblz4.a; path = a/liblz4.a; sourceTree = "<group>"; };
+		D11C9F752E2780390056C340 /* libncurses++.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libncurses++.a"; path = "a/libncurses++.a"; sourceTree = "<group>"; };
+		D11C9F762E2780390056C340 /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libz.a; path = a/libz.a; sourceTree = "<group>"; };
+		D11C9F772E2780390056C340 /* libboost_atomic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_atomic.a; path = a/libboost_atomic.a; sourceTree = "<group>"; };
+		D11C9F782E2780390056C340 /* libpq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpq.a; path = a/libpq.a; sourceTree = "<group>"; };
+		D11C9F792E2780390056C340 /* libboost_date_time.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_date_time.a; path = a/libboost_date_time.a; sourceTree = "<group>"; };
+		D11C9F7A2E2780390056C340 /* libboost_wserialization.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_wserialization.a; path = a/libboost_wserialization.a; sourceTree = "<group>"; };
+		D11C9F7B2E27803A0056C340 /* libboost_container.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_container.a; path = a/libboost_container.a; sourceTree = "<group>"; };
+		D11C9F7C2E27803A0056C340 /* libpgport.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpgport.a; path = a/libpgport.a; sourceTree = "<group>"; };
+		D11C9F7D2E27803A0056C340 /* libboost_serialization.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_serialization.a; path = a/libboost_serialization.a; sourceTree = "<group>"; };
+		D11C9F7E2E27803A0056C340 /* libodbcinst.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libodbcinst.a; path = a/libodbcinst.a; sourceTree = "<group>"; };
+		D11C9F7F2E27803A0056C340 /* libzstd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzstd.a; path = a/libzstd.a; sourceTree = "<group>"; };
+		D11C9F802E27803A0056C340 /* libmysqlclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmysqlclient.a; path = a/libmysqlclient.a; sourceTree = "<group>"; };
+		D11C9F812E27803A0056C340 /* libecpg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libecpg.a; path = a/libecpg.a; sourceTree = "<group>"; };
+		D11C9F822E27803A0056C340 /* libsoci_mysql.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsoci_mysql.a; path = a/libsoci_mysql.a; sourceTree = "<group>"; };
+		D11C9F832E27803A0056C340 /* libsoci_postgresql.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsoci_postgresql.a; path = a/libsoci_postgresql.a; sourceTree = "<group>"; };
+		D11C9F842E27803A0056C340 /* libsqlite3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsqlite3.a; path = a/libsqlite3.a; sourceTree = "<group>"; };
+		D11C9F852E27803A0056C340 /* libjsoncpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjsoncpp.a; path = a/libjsoncpp.a; sourceTree = "<group>"; };
+		D11C9F862E27803A0056C340 /* libboost_chrono.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_chrono.a; path = a/libboost_chrono.a; sourceTree = "<group>"; };
+		D11C9F872E27803A0056C340 /* libboost_program_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_program_options.a; path = a/libboost_program_options.a; sourceTree = "<group>"; };
+		D11C9F882E27803A0056C340 /* libodbc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libodbc.a; path = a/libodbc.a; sourceTree = "<group>"; };
+		D11C9F892E27803A0056C340 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = a/libboost_system.a; sourceTree = "<group>"; };
+		D11C9F8A2E27803A0056C340 /* libmenu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmenu.a; path = a/libmenu.a; sourceTree = "<group>"; };
+		D11C9F8B2E27803A0056C340 /* libodbccr.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libodbccr.a; path = a/libodbccr.a; sourceTree = "<group>"; };
+		D11C9F8C2E27803A0056C340 /* libpgtypes.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpgtypes.a; path = a/libpgtypes.a; sourceTree = "<group>"; };
+		D11C9F8D2E27803A0056C340 /* libsoci_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsoci_core.a; path = a/libsoci_core.a; sourceTree = "<group>"; };
+		D11C9F8E2E27803A0056C340 /* libpanel.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpanel.a; path = a/libpanel.a; sourceTree = "<group>"; };
+		D11C9F8F2E27803A0056C340 /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_thread.a; path = a/libboost_thread.a; sourceTree = "<group>"; };
+		D11C9F902E27803A0056C340 /* libsoci_odbc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsoci_odbc.a; path = a/libsoci_odbc.a; sourceTree = "<group>"; };
+		D11C9F912E27803A0056C340 /* libboost_graph.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_graph.a; path = a/libboost_graph.a; sourceTree = "<group>"; };
+		D11C9F922E27803A0056C340 /* libboost_random.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_random.a; path = a/libboost_random.a; sourceTree = "<group>"; };
+		D11C9F932E27803A0056C340 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = a/libssl.a; sourceTree = "<group>"; };
+		D11C9FBA2E2780510056C340 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		D120937E13534DCC00A72CAA /* 4DPlugin-SQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "4DPlugin-SQL.h"; sourceTree = "<group>"; };
+		D130064E12F02D9700702C0E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		D13116A81A03ACB700DE1322 /* 4DPluginAPI.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = 4DPluginAPI.c; sourceTree = "<group>"; };
+		D134D4A91A030B06008D14EF /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		D14D10DD1A03A8A5008B3411 /* constants.xlf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = constants.xlf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D01CCCD0486CAD60068D4B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D11C9FBB2E2780510056C340 /* libiconv.tbd in Frameworks */,
+				D11C9F942E27803A0056C340 /* libpgcommon.a in Frameworks */,
+				D11C9F952E27803A0056C340 /* libncurses.a in Frameworks */,
+				D11C9F962E27803A0056C340 /* libsoci_sqlite3.a in Frameworks */,
+				D11C9F972E27803A0056C340 /* libcrypto.a in Frameworks */,
+				D11C9F982E27803A0056C340 /* libecpg_compat.a in Frameworks */,
+				D11C9F992E27803A0056C340 /* libform.a in Frameworks */,
+				D11C9F9A2E27803A0056C340 /* liblz4.a in Frameworks */,
+				D11C9F9B2E27803A0056C340 /* libncurses++.a in Frameworks */,
+				D11C9F9C2E27803A0056C340 /* libz.a in Frameworks */,
+				D11C9F9D2E27803A0056C340 /* libboost_atomic.a in Frameworks */,
+				D11C9F9E2E27803A0056C340 /* libpq.a in Frameworks */,
+				D11C9F9F2E27803A0056C340 /* libboost_date_time.a in Frameworks */,
+				D11C9FA02E27803A0056C340 /* libboost_wserialization.a in Frameworks */,
+				D11C9FA12E27803A0056C340 /* libboost_container.a in Frameworks */,
+				D11C9FA22E27803A0056C340 /* libpgport.a in Frameworks */,
+				D11C9FA32E27803A0056C340 /* libboost_serialization.a in Frameworks */,
+				D11C9FA42E27803A0056C340 /* libodbcinst.a in Frameworks */,
+				D11C9FA52E27803A0056C340 /* libzstd.a in Frameworks */,
+				D11C9FA62E27803A0056C340 /* libmysqlclient.a in Frameworks */,
+				D11C9FA72E27803A0056C340 /* libecpg.a in Frameworks */,
+				D11C9FA82E27803A0056C340 /* libsoci_mysql.a in Frameworks */,
+				D11C9FA92E27803A0056C340 /* libsoci_postgresql.a in Frameworks */,
+				D11C9FAA2E27803A0056C340 /* libsqlite3.a in Frameworks */,
+				D11C9FAB2E27803A0056C340 /* libjsoncpp.a in Frameworks */,
+				D11C9FAC2E27803A0056C340 /* libboost_chrono.a in Frameworks */,
+				D11C9FAD2E27803A0056C340 /* libboost_program_options.a in Frameworks */,
+				D11C9FAE2E27803A0056C340 /* libodbc.a in Frameworks */,
+				D11C9FAF2E27803A0056C340 /* libboost_system.a in Frameworks */,
+				D11C9FB02E27803A0056C340 /* libmenu.a in Frameworks */,
+				D11C9FB12E27803A0056C340 /* libodbccr.a in Frameworks */,
+				D11C9FB22E27803A0056C340 /* libpgtypes.a in Frameworks */,
+				D11C9FB32E27803A0056C340 /* libsoci_core.a in Frameworks */,
+				D11C9FB42E27803A0056C340 /* libpanel.a in Frameworks */,
+				D11C9FB52E27803A0056C340 /* libboost_thread.a in Frameworks */,
+				D11C9FB62E27803A0056C340 /* libsoci_odbc.a in Frameworks */,
+				D11C9FB72E27803A0056C340 /* libboost_graph.a in Frameworks */,
+				D11C9FB82E27803A0056C340 /* libboost_random.a in Frameworks */,
+				D11C9FB92E27803A0056C340 /* libssl.a in Frameworks */,
+				D130064F12F02D9700702C0E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* SQL */ = {
+			isa = PBXGroup;
+			children = (
+				D108BD7A1A03D1E6001F1B90 /* Manifest */,
+				08FB77ADFE841716C02AAC07 /* Source */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				189286360695AD8900B05D6E /* Products */,
+				D16FBB3C22A4C07E008F0416 /* Frameworks */,
+			);
+			name = SQL;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				D130064E12F02D9700702C0E /* Cocoa.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D01CCD10486CAD60068D4B7 /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77ADFE841716C02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D11C9F6A2E277D9E0056C340 /* 4DPlugin-JSON.h */,
+				D11C9F6B2E277D9E0056C340 /* 4DPlugin-JSON.cpp */,
+				D11C9F642E277CDA0056C340 /* C_TEXT.h */,
+				D11C9F652E277CDA0056C340 /* C_TEXT.cpp */,
+				D11C9F662E277CDA0056C340 /* C_TYPES.h */,
+				18B684FE06944F8800CC6A1E /* 4DPlugin-SQL.cpp */,
+				D120937E13534DCC00A72CAA /* 4DPlugin-SQL.h */,
+				18B684ED06944F2000CC6A1E /* 4D Plugin API */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		189286360695AD8900B05D6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				189286350695AD8900B05D6E /* SQL.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18B684ED06944F2000CC6A1E /* 4D Plugin API */ = {
+			isa = PBXGroup;
+			children = (
+				D13116A81A03ACB700DE1322 /* 4DPluginAPI.c */,
+				18B684F006944F2000CC6A1E /* 4DPluginAPI.h */,
+				18B684F106944F2000CC6A1E /* EntryPoints.h */,
+				18B684F206944F2000CC6A1E /* Flags.h */,
+				18B684F306944F2000CC6A1E /* PrivateTypes.h */,
+				18B684F406944F2000CC6A1E /* PublicTypes.h */,
+			);
+			path = "4D Plugin API";
+			sourceTree = "<group>";
+		};
+		D108BD7A1A03D1E6001F1B90 /* Manifest */ = {
+			isa = PBXGroup;
+			children = (
+				D134D4A91A030B06008D14EF /* manifest.json */,
+				D14D10DD1A03A8A5008B3411 /* constants.xlf */,
+			);
+			name = Manifest;
+			sourceTree = "<group>";
+		};
+		D16FBB3C22A4C07E008F0416 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D11C9FBA2E2780510056C340 /* libiconv.tbd */,
+				D11C9F772E2780390056C340 /* libboost_atomic.a */,
+				D11C9F862E27803A0056C340 /* libboost_chrono.a */,
+				D11C9F7B2E27803A0056C340 /* libboost_container.a */,
+				D11C9F792E2780390056C340 /* libboost_date_time.a */,
+				D11C9F912E27803A0056C340 /* libboost_graph.a */,
+				D11C9F872E27803A0056C340 /* libboost_program_options.a */,
+				D11C9F922E27803A0056C340 /* libboost_random.a */,
+				D11C9F7D2E27803A0056C340 /* libboost_serialization.a */,
+				D11C9F892E27803A0056C340 /* libboost_system.a */,
+				D11C9F8F2E27803A0056C340 /* libboost_thread.a */,
+				D11C9F7A2E2780390056C340 /* libboost_wserialization.a */,
+				D11C9F712E2780390056C340 /* libcrypto.a */,
+				D11C9F812E27803A0056C340 /* libecpg.a */,
+				D11C9F722E2780390056C340 /* libecpg_compat.a */,
+				D11C9F732E2780390056C340 /* libform.a */,
+				D11C9F852E27803A0056C340 /* libjsoncpp.a */,
+				D11C9F742E2780390056C340 /* liblz4.a */,
+				D11C9F8A2E27803A0056C340 /* libmenu.a */,
+				D11C9F802E27803A0056C340 /* libmysqlclient.a */,
+				D11C9F6F2E2780390056C340 /* libncurses.a */,
+				D11C9F752E2780390056C340 /* libncurses++.a */,
+				D11C9F882E27803A0056C340 /* libodbc.a */,
+				D11C9F8B2E27803A0056C340 /* libodbccr.a */,
+				D11C9F7E2E27803A0056C340 /* libodbcinst.a */,
+				D11C9F8E2E27803A0056C340 /* libpanel.a */,
+				D11C9F6E2E2780390056C340 /* libpgcommon.a */,
+				D11C9F7C2E27803A0056C340 /* libpgport.a */,
+				D11C9F8C2E27803A0056C340 /* libpgtypes.a */,
+				D11C9F782E2780390056C340 /* libpq.a */,
+				D11C9F8D2E27803A0056C340 /* libsoci_core.a */,
+				D11C9F822E27803A0056C340 /* libsoci_mysql.a */,
+				D11C9F902E27803A0056C340 /* libsoci_odbc.a */,
+				D11C9F832E27803A0056C340 /* libsoci_postgresql.a */,
+				D11C9F702E2780390056C340 /* libsoci_sqlite3.a */,
+				D11C9F842E27803A0056C340 /* libsqlite3.a */,
+				D11C9F932E27803A0056C340 /* libssl.a */,
+				D11C9F762E2780390056C340 /* libz.a */,
+				D11C9F7F2E27803A0056C340 /* libzstd.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D01CCC70486CAD60068D4B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D11C9F6D2E277D9E0056C340 /* 4DPlugin-JSON.h in Headers */,
+				18B684F706944F2000CC6A1E /* 4DPluginAPI.h in Headers */,
+				D11C9F682E277CDA0056C340 /* C_TEXT.h in Headers */,
+				D11C9F692E277CDA0056C340 /* C_TYPES.h in Headers */,
+				18B684F806944F2000CC6A1E /* EntryPoints.h in Headers */,
+				18B684F906944F2000CC6A1E /* Flags.h in Headers */,
+				18B684FA06944F2000CC6A1E /* PrivateTypes.h in Headers */,
+				18B684FB06944F2000CC6A1E /* PublicTypes.h in Headers */,
+				D120937F13534DCC00A72CAA /* 4DPlugin-SQL.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D01CCC60486CAD60068D4B7 /* SQL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42D60B3F0A9DDBC8002ABB42 /* Build configuration list for PBXNativeTarget "SQL" */;
+			buildPhases = (
+				8D01CCC70486CAD60068D4B7 /* Headers */,
+				8D01CCC90486CAD60068D4B7 /* Resources */,
+				D134D4AB1A030B7A008D14EF /* CopyFiles */,
+				8D01CCCB0486CAD60068D4B7 /* Sources */,
+				8D01CCCD0486CAD60068D4B7 /* Frameworks */,
+				8D01CCCF0486CAD60068D4B7 /* Rez */,
+				D1292E7B22C4A91E00CB5A8C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SQL;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = SQL;
+			productReference = 189286350695AD8900B05D6E /* SQL.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					8D01CCC60486CAD60068D4B7 = {
+						DevelopmentTeam = Y69CWUC25B;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 42D60B430A9DDBC8002ABB42 /* Build configuration list for PBXProject "SQL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* SQL */;
+			productRefGroup = 189286360695AD8900B05D6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D01CCC60486CAD60068D4B7 /* SQL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D01CCC90486CAD60068D4B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D01CCCA0486CAD60068D4B7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		8D01CCCF0486CAD60068D4B7 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D1292E7B22C4A91E00CB5A8C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test \"$CONFIGURATION\" == 'Deployment'; then\n\n    USER_NAME=keisuke.miyako@4d.com\n    UUID=`uuidgen | tr -d - | tr -d '\\n' | tr '[:upper:]' '[:lower:]'`\n    DEVELOPER_ID=`security find-identity -p codesigning -v | egrep 'Developer ID Application[^\"]+' -o`\n    PRODUCT_PATH=\"$CODESIGNING_FOLDER_PATH\"\n    \n    #clean\n    xattr -cr \"$PRODUCT_PATH\"\n    codesign --remove-signature \"$PRODUCT_PATH\"\n    \n    #sign\n    codesign --verbose --deep --timestamp --force --sign \"$DEVELOPER_ID\" \"$PRODUCT_PATH\"\n    \n    #archive\n    DMG_PATH=\"$PROJECT_DIR/$PRODUCT_NAME.dmg\"\n    ZIP_PATH=\"$PROJECT_DIR/$PRODUCT_NAME.zip\" #for windows\n    rm -f \"$DMG_PATH\"\n    hdiutil create -format UDBZ -plist -srcfolder \"$PRODUCT_PATH\" \"$DMG_PATH\"\n    rm -f \"$ZIP_PATH\"\n    ditto -c -k --keepParent \"$PRODUCT_PATH\" \"$ZIP_PATH\"\n    \n    xcrun notarytool submit \"$ZIP_PATH\" --keychain-profile \"notarytool\" --wait\n    xcrun notarytool submit \"$DMG_PATH\" --keychain-profile \"notarytool\" --wait\n        \n    xcrun stapler staple \"$DMG_PATH\"\n\nelse\n    echo \"No notarization performed as this is not a release build.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D01CCCB0486CAD60068D4B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D11C9F6C2E277D9E0056C340 /* 4DPlugin-JSON.cpp in Sources */,
+				18B684FF06944F8800CC6A1E /* 4DPlugin-SQL.cpp in Sources */,
+				D11C9F672E277CDA0056C340 /* C_TEXT.cpp in Sources */,
+				D13116A91A03ACB700DE1322 /* 4DPluginAPI.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42D60B400A9DDBC8002ABB42 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				DEPLOYMENT_LOCATION = NO;
+				DEVELOPMENT_TEAM = Y69CWUC25B;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "include/**";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/lib",
+					"$(PROJECT_DIR)/a",
+				);
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.4D.SQL;
+				PRODUCT_NAME = SQL;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../Documents/GitHub/4d-plugin-soci/SOCI/include/soci-darwin/include\"";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		42D60B410A9DDBC8002ABB42 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEPLOYMENT_LOCATION = NO;
+				DEVELOPMENT_TEAM = Y69CWUC25B;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "include/**";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/lib",
+					"$(PROJECT_DIR)/a",
+				);
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.4D.SQL;
+				PRODUCT_NAME = SQL;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../Documents/GitHub/4d-plugin-soci/SOCI/include/soci-darwin/include\"";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		42D60B420A9DDBC8002ABB42 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = NO;
+				DEVELOPMENT_TEAM = Y69CWUC25B;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "include/**";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/lib",
+					"$(PROJECT_DIR)/a",
+				);
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.4D.SQL;
+				PRODUCT_NAME = SQL;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../Documents/GitHub/4d-plugin-soci/SOCI/include/soci-darwin/include\"";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Default;
+		};
+		42D60B440A9DDBC8002ABB42 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				DEVELOPMENT_TEAM = Y69CWUC25B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OBJROOT = "$(SRCROOT)/build";
+				SDKROOT = macosx;
+				SYMROOT = "$(SRCROOT)/test/Plugins";
+			};
+			name = Development;
+		};
+		42D60B450A9DDBC8002ABB42 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				DEVELOPMENT_TEAM = Y69CWUC25B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OBJROOT = "$(SRCROOT)/build";
+				SDKROOT = macosx;
+				SYMROOT = "$(SRCROOT)/test/Plugins";
+			};
+			name = Deployment;
+		};
+		42D60B460A9DDBC8002ABB42 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				DEVELOPMENT_TEAM = Y69CWUC25B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				SYMROOT = "$(SRCROOT)/test/Plugins";
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42D60B3F0A9DDBC8002ABB42 /* Build configuration list for PBXNativeTarget "SQL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42D60B400A9DDBC8002ABB42 /* Development */,
+				42D60B410A9DDBC8002ABB42 /* Deployment */,
+				42D60B420A9DDBC8002ABB42 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		42D60B430A9DDBC8002ABB42 /* Build configuration list for PBXProject "SQL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42D60B440A9DDBC8002ABB42 /* Development */,
+				42D60B450A9DDBC8002ABB42 /* Deployment */,
+				42D60B460A9DDBC8002ABB42 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

@@ -1,0 +1,4 @@
+sql/test/userPreferences.*
+sql/test/Project/Sources/settings.4DSettings
+sql/test/Project/DerivedData/*
+sql/build/*

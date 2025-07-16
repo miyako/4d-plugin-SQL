@@ -1,0 +1,11 @@
+{
+    "name": "SQL",
+    "id": 20000,
+    "commands": [
+        {
+            "theme": "SQL",
+            "syntax": "SQLGetInfo(&T;&L;&J):J",
+            "threadSafe": true
+        }
+    ]
+}
