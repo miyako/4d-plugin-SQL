@@ -259,29 +259,29 @@ static void SQLGetInfo(PA_PluginParameters params) {
             ob_set_n(status, "maximumColumnsInOrderBy", maximumColumnsInOrderBy);
         }
         
-        SQLUSMALLINT maximumColumnsinGroupBy;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_GROUP_BY, &maximumColumnsinGroupBy, sizeof(SQLUSMALLINT), &outlen))) {
-            ob_set_n(status, "maximumColumnsinGroupBy", maximumColumnsinGroupBy);
+        SQLUSMALLINT maximumColumnsInGroupBy;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_GROUP_BY, &maximumColumnsInGroupBy, sizeof(SQLUSMALLINT), &outlen))) {
+            ob_set_n(status, "maximumColumnsInGroupBy", maximumColumnsInGroupBy);
         }
         
-        SQLUSMALLINT maximumColumnsinIndex;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_INDEX, &maximumColumnsinIndex, sizeof(SQLUSMALLINT), &outlen))) {
-            ob_set_n(status, "maximumColumnsinIndex", maximumColumnsinIndex);
+        SQLUSMALLINT maximumColumnsInIndex;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_INDEX, &maximumColumnsInIndex, sizeof(SQLUSMALLINT), &outlen))) {
+            ob_set_n(status, "maximumColumnsInIndex", maximumColumnsInIndex);
         }
         
-        SQLUSMALLINT maximumColumnsinOrderBy;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_ORDER_BY, &maximumColumnsinOrderBy, sizeof(SQLUSMALLINT), &outlen))) {
-            ob_set_n(status, "maximumColumnsinOrderBy", maximumColumnsinOrderBy);
+        SQLUSMALLINT maximumColumnsInOrderBy;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_ORDER_BY, &maximumColumnsInOrderBy, sizeof(SQLUSMALLINT), &outlen))) {
+            ob_set_n(status, "maximumColumnsInOrderBy", maximumColumnsInOrderBy);
         }
         
-        SQLUSMALLINT maximumColumnsinSelect;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_SELECT, &maximumColumnsinSelect, sizeof(SQLUSMALLINT), &outlen))) {
-            ob_set_n(status, "maximumColumnsinSelect", maximumColumnsinSelect);
+        SQLUSMALLINT maximumColumnsInSelect;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_SELECT, &maximumColumnsInSelect, sizeof(SQLUSMALLINT), &outlen))) {
+            ob_set_n(status, "maximumColumnsInSelect", maximumColumnsInSelect);
         }
         
-        SQLUSMALLINT maximumColumnsinTable;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_TABLE, &maximumColumnsinTable, sizeof(SQLUSMALLINT), &outlen))) {
-            ob_set_n(status, "maximumColumnsinTable", maximumColumnsinTable);
+        SQLUSMALLINT maximumColumnsInTable;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_TABLE, &maximumColumnsInTable, sizeof(SQLUSMALLINT), &outlen))) {
+            ob_set_n(status, "maximumColumnsInTable", maximumColumnsInTable);
         }
         
         SQLUINTEGER maximumIndexSize;
@@ -315,9 +315,9 @@ static void SQLGetInfo(PA_PluginParameters params) {
         }
         
         
-        SQLCHAR xopenCliYear[1024];
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_XOPEN_CLI_YEAR, xopenCliYear, sizeof(xopenCliYear), &outlen))) {
-            ob_set_s(status, "xopenCliYear", (const char *)xopenCliYear);
+        SQLCHAR xopenCLIYear[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_XOPEN_CLI_YEAR, xopenCLIYear, sizeof(xopenCLIYear), &outlen))) {
+            ob_set_s(status, "xopenCLIYear", (const char *)xopenCLIYear);
         }
         
         SQLUINTEGER cursorSensitivity;

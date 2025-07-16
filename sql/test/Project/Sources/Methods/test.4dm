@@ -1,8 +1,6 @@
 //%attributes = {"invisible":true}
-If (Is macOS:C1572)
-	$connection:="Driver=/opt/homebrew/lib/psqlodbcw.so;Server=localhost;Port=5432;Database=mydb;UID=myuser;PWD=mypass;"
-	$status:=SQLGetInfo($connection; SOCI_NOT_IN_TRANSACTION; {odbc_option_driver_complete: "0"})
-	SET TEXT TO PASTEBOARD:C523(JSON Stringify:C1217($status; *))
+$connection:="Driver=/opt/homebrew/lib/psqlodbcw.so;Server=localhost;Port=5432;Database=mydb;UID=myuser;PWD=mypass;"
+$status:=SQLGetInfo($connection; SOCI_NOT_IN_TRANSACTION; {odbc_option_driver_complete: "0"})
 /*
 {
 "success": true,
@@ -57,5 +55,4 @@ If (Is macOS:C1572)
 "maximumIdentifierLength": 63
 }
 */
-End if 
 
