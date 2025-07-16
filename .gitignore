@@ -2,3 +2,7 @@ sql/test/userPreferences.*
 sql/test/Project/Sources/settings.4DSettings
 sql/test/Project/DerivedData/*
 sql/build/*
+sql/test/Plugins/SQL.bundle/Contents/Windows64/SQL.exp
+sql/test/Plugins/SQL.bundle/Contents/Windows64/SQL.lib
+sql/.vs/*
+sql/Objs/*

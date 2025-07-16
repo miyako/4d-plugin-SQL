@@ -68,20 +68,23 @@ static void SQLGetInfo(PA_PluginParameters params) {
             tr = std::make_unique<soci::transaction>(sql);
         }
         
+        /*
         soci::odbc_session_backend* backend =
                 static_cast<soci::odbc_session_backend*>(sql.get_backend());
-    
+
         SQLHDBC hdbc = backend->hdbc_;
-        
+
         SQLCHAR dbmsName[1024];
         SQLSMALLINT outlen;
         SQLRETURN ret = SQLGetInfo(hdbc, SQL_DBMS_NAME, dbmsName, sizeof(dbmsName), &outlen);
-        
+
         if (SQL_SUCCEEDED(ret)) {
-            
+
             ob_set_b(status, L"success", true);
             ob_set_s(status, "dbmsName", (const char *)dbmsName);
         }
+        */
+
         
         
         if(mode == soci_mode_transaction) {
