@@ -347,4 +347,3 @@ static void SQLGetInfo(PA_PluginParameters params) {
     }
     PA_ReturnObject(params, status);
 }
-
