@@ -259,19 +259,9 @@ static void SQLGetInfo(PA_PluginParameters params) {
             ob_set_n(status, "maximumColumnsInOrderBy", maximumColumnsInOrderBy);
         }
         
-        SQLUSMALLINT maximumColumnsInGroupBy;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_GROUP_BY, &maximumColumnsInGroupBy, sizeof(SQLUSMALLINT), &outlen))) {
-            ob_set_n(status, "maximumColumnsInGroupBy", maximumColumnsInGroupBy);
-        }
-        
-        SQLUSMALLINT maximumColumnsInIndex;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_INDEX, &maximumColumnsInIndex, sizeof(SQLUSMALLINT), &outlen))) {
-            ob_set_n(status, "maximumColumnsInIndex", maximumColumnsInIndex);
-        }
-        
-        SQLUSMALLINT maximumColumnsInOrderBy;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_ORDER_BY, &maximumColumnsInOrderBy, sizeof(SQLUSMALLINT), &outlen))) {
-            ob_set_n(status, "maximumColumnsInOrderBy", maximumColumnsInOrderBy);
+        SQLUSMALLINT maximumColumnsinGroupBy;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_GROUP_BY, &maximumColumnsinGroupBy, sizeof(SQLUSMALLINT), &outlen))) {
+            ob_set_n(status, "maximumColumnsinGroupBy", maximumColumnsinGroupBy);
         }
         
         SQLUSMALLINT maximumColumnsInSelect;

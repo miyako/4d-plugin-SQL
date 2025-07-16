@@ -1,6 +1,7 @@
 //%attributes = {"invisible":true}
 $connection:="Driver=/opt/homebrew/lib/psqlodbcw.so;Server=localhost;Port=5432;Database=mydb;UID=myuser;PWD=mypass;"
 $status:=SQLGetInfo($connection; SOCI_NOT_IN_TRANSACTION; {odbc_option_driver_complete: "0"})
+SET TEXT TO PASTEBOARD:C523(JSON Stringify:C1217($status; *))
 /*
 {
 "success": true,
@@ -40,19 +41,17 @@ $status:=SQLGetInfo($connection; SOCI_NOT_IN_TRANSACTION; {odbc_option_driver_co
 "maximumColumnsInIndex": 0,
 "maximumColumnsInOrderBy": 0,
 "maximumColumnsinGroupBy": 0,
-"maximumColumnsinIndex": 0,
-"maximumColumnsinOrderBy": 0,
-"maximumColumnsinSelect": 0,
-"maximumColumnsinTable": 0,
+"maximumColumnsInSelect": 0,
+"maximumColumnsInTable": 0,
 "maximumIndexSize": 0,
 "maximumRowSize": 0,
 "maximumStatementLength": 0,
 "maximumTablesInSelect": 0,
 "maximumUserNameLength": 0,
 "outerJoinCapabilites": 127,
-"xopenCliYear": "1995",
+"xopenCLIYear": "1995",
 "describeParameter": "N",
-"maximumIdentifierLength": 63
+"maximumIdentifierLength": 5177407
 }
 */
 
