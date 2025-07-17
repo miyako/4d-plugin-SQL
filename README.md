@@ -47,6 +47,10 @@ alternative to `ODBC_SQLGetInfo` ([`SQLGetInfo`](https://learn.microsoft.com/en-
 |SQL_ODBC_SQL_CONFORMANCE|n/a|15
 |SQL_ODBC_SQL_OPT_IEF|integrity|
 |SQL_ODBC_VER|n/a|10
+|SQL_OJ_CAPABILITIES|outerJoinCapabilites|
+|SQL_OUTER_JOINS|n/a|38
+|SQL_OWNER_TERM|n/a|39
+|SQL_OWNER_USAGE|n/a|91
 |SQL_UNION|n/a|96
 
 ```4d
