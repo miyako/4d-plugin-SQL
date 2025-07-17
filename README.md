@@ -5,6 +5,27 @@
 
 # 4d-plugin-SQL
 
+alternative to `ODBC_SQLGetInfo` ([`SQLGetInfo`](https://learn.microsoft.com/en-us/sql/odbc/reference/syntax/sqlgetinfo-function?view=sql-server-ver17))
+
+|type|property|
+|-|-|
+|SQL_ACTIVE_CONNECTIONS|maximumDriverConnections|
+|SQL_ACTIVE_ENVIRONMENTS|n/a|
+|SQL_ACTIVE_STATEMENTS|maximumConcurrentActivities|
+|SQL_AGGREGATE_FUNCTIONS|n/a|
+|SQL_ALTER_DOMAIN|n/a|
+|SQL_ASYNC_MODE|n/a|
+|SQL_BATCH_ROW_COUNT|n/a|
+|SQL_BATCH_SUPPORT|n/a|
+|SQL_BOOKMARK_PERSISTENCE|n/a|
+|SQL_CATALOG_LOCATION|n/a|
+|SQL_CATALOG_NAME_SEPARATOR|n/a|
+|SQL_CATALOG_TERM|n/a|
+|SQL_CATALOG_USAGE|n/a|
+|SQL_COLUMN_ALIAS|n/a|
+|SQL_CONCAT_NULL_BEHAVIOR|n/a|
+|SQL_UNION_STATEMENT|n/a|
+
 ```4d
 $connection:="Driver=/opt/homebrew/lib/psqlodbcw.so;Server=localhost;Port=5432;Database=mydb;UID=myuser;PWD=mypass;"
 $status:=SQLGetInfo($connection; SOCI_NOT_IN_TRANSACTION; {odbc_option_driver_complete: "0"})
