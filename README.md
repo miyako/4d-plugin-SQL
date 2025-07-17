@@ -7,24 +7,24 @@
 
 alternative to `ODBC_SQLGetInfo` ([`SQLGetInfo`](https://learn.microsoft.com/en-us/sql/odbc/reference/syntax/sqlgetinfo-function?view=sql-server-ver17))
 
-|type|property|
-|-|-|
+|type|property|note|
+|-|-|-|
 |SQL_ACTIVE_CONNECTIONS|maximumDriverConnections|
-|SQL_ACTIVE_ENVIRONMENTS|n/a|
+|SQL_ACTIVE_ENVIRONMENTS|n/a|116
 |SQL_ACTIVE_STATEMENTS|maximumConcurrentActivities|
-|SQL_AGGREGATE_FUNCTIONS|n/a|
-|SQL_ALTER_DOMAIN|n/a|
-|SQL_ASYNC_MODE|n/a|
-|SQL_BATCH_ROW_COUNT|n/a|
-|SQL_BATCH_SUPPORT|n/a|
-|SQL_BOOKMARK_PERSISTENCE|n/a|
-|SQL_CATALOG_LOCATION|n/a|
-|SQL_CATALOG_NAME_SEPARATOR|n/a|
-|SQL_CATALOG_TERM|n/a|
-|SQL_CATALOG_USAGE|n/a|
-|SQL_COLUMN_ALIAS|n/a|
-|SQL_CONCAT_NULL_BEHAVIOR|n/a|
-|SQL_UNION_STATEMENT|n/a|
+|SQL_AGGREGATE_FUNCTIONS|n/a|169
+|SQL_ALTER_DOMAIN|n/a|117
+|SQL_ASYNC_MODE|n/a|10021
+|SQL_BATCH_ROW_COUNT|n/a|120
+|SQL_BATCH_SUPPORT|n/a|121
+|SQL_BOOKMARK_PERSISTENCE|n/a|82
+|SQL_CATALOG_LOCATION|n/a|114
+|SQL_CATALOG_NAME_SEPARATOR|n/a|41
+|SQL_CATALOG_TERM|n/a|42
+|SQL_CATALOG_USAGE|n/a|92
+|SQL_COLUMN_ALIAS|n/a|87
+|SQL_CONCAT_NULL_BEHAVIOR|n/a|22
+|SQL_UNION|n/a|96
 
 ```4d
 $connection:="Driver=/opt/homebrew/lib/psqlodbcw.so;Server=localhost;Port=5432;Database=mydb;UID=myuser;PWD=mypass;"
