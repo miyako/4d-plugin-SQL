@@ -35,6 +35,16 @@ void PluginMain(PA_long32 selector, PA_PluginParameters params) {
 
 #pragma mark -
 
+#if VERSIONMAC
+#define SQLGETINFOCHAR SQLCHAR
+#define ob_set_sqlchar ob_set_s
+#define sqlchar const char
+#else
+#define SQLGETINFOCHAR SQLWCHAR
+#define ob_set_sqlchar ob_set_a
+#define sqlchar const wchar_t
+#endif
+
 static void SQLGetInfo(PA_PluginParameters params) {
 
     PA_ObjectRef status = PA_CreateObject();
@@ -75,66 +85,118 @@ static void SQLGetInfo(PA_PluginParameters params) {
         
         SQLSMALLINT outlen;
 
-        SQLCHAR databaseName[1024];
+        SQLGETINFOCHAR databaseName[1024];
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, 16, databaseName, sizeof(databaseName), &outlen))) {
-            ob_set_s(status, "databaseName", (const char *)databaseName);
+            ob_set_sqlchar(status, L"databaseName", (sqlchar *)databaseName);
         }
 
-        SQLCHAR driverName[1024];
+        SQLGETINFOCHAR driverName[1024];
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, 6, driverName, sizeof(driverName), &outlen))) {
-            ob_set_s(status, "driverName", (const char *)driverName);
+            ob_set_sqlchar(status, L"driverName", (sqlchar *)driverName);
         }
         
-        SQLCHAR driverVer[1024];
+        SQLGETINFOCHAR driverVer[1024];
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, 7, driverVer, sizeof(driverVer), &outlen))) {
-            ob_set_s(status, "driverVersion", (const char *)driverVer);
+            ob_set_sqlchar(status, L"driverVersion", (sqlchar *)driverVer);
         }
 
-        SQLCHAR ODBCVer[1024];
+        SQLGETINFOCHAR ODBCVer[1024];
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, 10, ODBCVer, sizeof(ODBCVer), &outlen))) {
-            ob_set_s(status, "ODBCVersion", (const char *)ODBCVer);
+            ob_set_sqlchar(status, L"ODBCVersion", (sqlchar *)ODBCVer);
         }
 
-        SQLCHAR DMVer[1024];
+        SQLGETINFOCHAR DMVer[1024];
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, 19, DMVer, sizeof(DMVer), &outlen))) {
-            ob_set_s(status, "driverManagerVersion", (const char *)DMVer);
+            ob_set_sqlchar(status, L"driverManagerVersion", (sqlchar *)DMVer);
         }
         
-        SQLCHAR DBMSVer[1024];
+        SQLGETINFOCHAR DBMSVer[1024];
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, 18, DBMSVer, sizeof(DBMSVer), &outlen))) {
-            ob_set_s(status, "databaseManagementSystemVersion", (const char *)DBMSVer);
+            ob_set_sqlchar(status, L"databaseManagementSystemVersion", (sqlchar *)DBMSVer);
         }
         
-        SQLCHAR DBMSName[1024];
+        SQLGETINFOCHAR DBMSName[1024];
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, 17, DBMSName, sizeof(DBMSName), &outlen))) {
-            ob_set_s(status, "databaseManagementSystemName", (const char *)DBMSName);
+            ob_set_sqlchar(status, L"databaseManagementSystemName", (sqlchar *)DBMSName);
         }
         
-        SQLCHAR accessibleProcedures[2];
+        SQLGETINFOCHAR accessibleProcedures[2];
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_ACCESSIBLE_PROCEDURES, accessibleProcedures, sizeof(accessibleProcedures), &outlen))) {
-            ob_set_s(status, "accessibleProcedures", (const char *)accessibleProcedures);
+            ob_set_sqlchar(status, L"accessibleProcedures", (sqlchar *)accessibleProcedures);
         }
         
-        SQLCHAR accessibleTables[2];
+        SQLGETINFOCHAR accessibleTables[2];
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_ACCESSIBLE_TABLES, accessibleTables, sizeof(accessibleTables), &outlen))) {
-            ob_set_s(status, "accessibleTables", (const char *)accessibleTables);
+            ob_set_sqlchar(status, L"accessibleTables", (sqlchar *)accessibleTables);
         }
-        
-        SQLUINTEGER alterTable;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_ALTER_TABLE, &alterTable, sizeof(SQLUINTEGER), &outlen))) {
-            ob_set_n(status, "alterTable", alterTable);
-        }
-        
-        SQLCHAR catalogName[2];
+                
+        SQLGETINFOCHAR catalogName[2];
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_CATALOG_NAME, catalogName, sizeof(catalogName), &outlen))) {
-            ob_set_s(status, "catalogName", (const char *)catalogName);
+            ob_set_sqlchar(status, L"catalogName", (sqlchar *)catalogName);
         }
         
-        SQLCHAR collationSequence[1024];
+        SQLGETINFOCHAR collationSequence[1024];
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_COLLATION_SEQ, collationSequence, sizeof(collationSequence), &outlen))) {
-            ob_set_s(status, "collationSequence", (const char *)collationSequence);
+            ob_set_sqlchar(status, L"collationSequence", (sqlchar *)collationSequence);
+        }
+        
+        SQLGETINFOCHAR dataSourceName[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_DATA_SOURCE_NAME, dataSourceName, sizeof(dataSourceName), &outlen))) {
+            ob_set_sqlchar(status, L"dataSourceName", (sqlchar *)dataSourceName);
+        }
+        
+        SQLGETINFOCHAR serverName[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_SERVER_NAME, serverName, sizeof(serverName), &outlen))) {
+            ob_set_sqlchar(status, L"serverName", (sqlchar *)serverName);
         }
 
+        SQLGETINFOCHAR searchPatternEscape[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_SEARCH_PATTERN_ESCAPE, searchPatternEscape, sizeof(searchPatternEscape), &outlen))) {
+            ob_set_sqlchar(status, L"searchPatternEscape", (sqlchar *)searchPatternEscape);
+        }
+                
+        SQLGETINFOCHAR dataSourceReadOnly[2];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_DATA_SOURCE_READ_ONLY, dataSourceReadOnly, sizeof(dataSourceReadOnly), &outlen))) {
+            ob_set_sqlchar(status, L"dataSourceReadOnly", (sqlchar *)dataSourceReadOnly);
+        }
+        
+        SQLGETINFOCHAR identifierQuoteChar[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_IDENTIFIER_QUOTE_CHAR, identifierQuoteChar, sizeof(identifierQuoteChar), &outlen))) {
+            ob_set_sqlchar(status, L"identifierQuoteChar", (sqlchar *)identifierQuoteChar);
+        }
+                        
+        SQLGETINFOCHAR userName[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_USER_NAME, userName, sizeof(userName), &outlen))) {
+            ob_set_sqlchar(status, L"userName", (sqlchar *)userName);
+        }
+                
+        SQLGETINFOCHAR integrity[2];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_INTEGRITY, integrity, sizeof(integrity), &outlen))) {
+            ob_set_sqlchar(status, L"integrity", (sqlchar *)integrity);
+        }
+        
+        SQLGETINFOCHAR orderByColumnsInSelect[2];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_ORDER_BY_COLUMNS_IN_SELECT, orderByColumnsInSelect, sizeof(orderByColumnsInSelect), &outlen))) {
+            ob_set_sqlchar(status, L"orderByColumnsInSelect", (sqlchar *)orderByColumnsInSelect);
+        }
+        
+        SQLGETINFOCHAR specialCharacters[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_SPECIAL_CHARACTERS, specialCharacters, sizeof(specialCharacters), &outlen))) {
+            ob_set_sqlchar(status, L"specialCharacters", (sqlchar *)specialCharacters);
+        }
+
+        SQLGETINFOCHAR xopenCLIYear[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_XOPEN_CLI_YEAR, xopenCLIYear, sizeof(xopenCLIYear), &outlen))) {
+            ob_set_sqlchar(status, L"xopenCLIYear", (sqlchar *)xopenCLIYear);
+        }
+        
+        SQLGETINFOCHAR describeParameter[2];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_DESCRIBE_PARAMETER, describeParameter, sizeof(describeParameter), &outlen))) {
+            ob_set_sqlchar(status, L"describeParameter", (sqlchar *)describeParameter);
+        }
+
+#pragma mark SQLUSMALLINT
+        
         SQLUSMALLINT maximumDriverConnections;
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_DRIVER_CONNECTIONS, &maximumDriverConnections, sizeof(SQLUSMALLINT), &outlen))) {
             ob_set_n(status, "maximumDriverConnections", maximumDriverConnections);
@@ -145,63 +207,14 @@ static void SQLGetInfo(PA_PluginParameters params) {
             ob_set_n(status, "maximumConcurrentActivities", maximumConcurrentActivities);
         }
         
-        SQLCHAR dataSourceName[1024];
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_DATA_SOURCE_NAME, dataSourceName, sizeof(dataSourceName), &outlen))) {
-            ob_set_s(status, "dataSourceName", (const char *)dataSourceName);
-        }
-        
-        //Information Types Deprecated in ODBC 3.x
-        
-        SQLINTEGER fetchDirection;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_FETCH_DIRECTION, &fetchDirection, sizeof(SQLINTEGER), &outlen))) {
-            ob_set_n(status, "fetchDirection", fetchDirection);
-        }
-        
-        SQLINTEGER scrollConcurrency;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_SCROLL_CONCURRENCY, &scrollConcurrency, sizeof(SQLINTEGER), &outlen))) {
-            ob_set_n(status, "scrollConcurrency", scrollConcurrency);
-        }
-        
-        //SQL_LOCK_TYPES
-        //SQL_ODBC_API_CONFORMANCE
-        //SQL_ODBC_SQL_CONFORMANCE
-        //SQL_POS_OPERATIONS
-        //SQL_POSITIONED_STATEMENTS
-        //SQL_STATIC_SENSITIVITY
-        
-        SQLCHAR serverName[1024];
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_SERVER_NAME, serverName, sizeof(serverName), &outlen))) {
-            ob_set_s(status, "serverName", (const char *)serverName);
-        }
-
-        SQLCHAR searchPatternEscape[1024];
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_SEARCH_PATTERN_ESCAPE, searchPatternEscape, sizeof(searchPatternEscape), &outlen))) {
-            ob_set_s(status, "searchPatternEscape", (const char *)searchPatternEscape);
-        }
-        
         SQLUSMALLINT cursorCommitBehavior;
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_CURSOR_COMMIT_BEHAVIOR, &cursorCommitBehavior, sizeof(SQLUSMALLINT), &outlen))) {
             ob_set_n(status, "cursorCommitBehavior", cursorCommitBehavior);
         }
         
-        SQLCHAR dataSourceReadOnly[2];
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_DATA_SOURCE_READ_ONLY, dataSourceReadOnly, sizeof(dataSourceReadOnly), &outlen))) {
-            ob_set_s(status, "dataSourceReadOnly", (const char *)dataSourceReadOnly);
-        }
-        
-        SQLUINTEGER defaultTransactionIsolation;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_DEFAULT_TXN_ISOLATION, &defaultTransactionIsolation, sizeof(SQLUINTEGER), &outlen))) {
-            ob_set_n(status, "defaultTransactionIsolation", defaultTransactionIsolation);
-        }
-        
         SQLUSMALLINT identifierCase;
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_IDENTIFIER_CASE, &identifierCase, sizeof(SQLUSMALLINT), &outlen))) {
             ob_set_n(status, "identifierCase", identifierCase);
-        }
-        
-        SQLCHAR identifierQuoteChar[1024];
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_IDENTIFIER_QUOTE_CHAR, identifierQuoteChar, sizeof(identifierQuoteChar), &outlen))) {
-            ob_set_s(status, "identifierQuoteChar", (const char *)identifierQuoteChar);
         }
         
         SQLUSMALLINT maximumColumnNameLength;
@@ -219,54 +232,9 @@ static void SQLGetInfo(PA_PluginParameters params) {
             ob_set_n(status, "maximumSchemaNameLength", maximumSchemaNameLength);
         }
         
-        SQLUSMALLINT maximumCatalogNameLength;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_CATALOG_NAME_LEN, &maximumCatalogNameLength, sizeof(SQLUSMALLINT), &outlen))) {
-            ob_set_n(status, "maximumCatalogNameLength", maximumCatalogNameLength);
-        }
-        
-        SQLUSMALLINT maximumTableNameLength;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_TABLE_NAME_LEN, &maximumTableNameLength, sizeof(SQLUSMALLINT), &outlen))) {
-            ob_set_n(status, "maximumTableNameLength", maximumTableNameLength);
-        }
-        
-        SQLUSMALLINT transactionCapable;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_TXN_CAPABLE, &transactionCapable, sizeof(SQLUSMALLINT), &outlen))) {
-            ob_set_n(status, "transactionCapable", transactionCapable);
-        }
-        
-        SQLCHAR userName[1024];
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_USER_NAME, userName, sizeof(userName), &outlen))) {
-            ob_set_s(status, "userName", (const char *)userName);
-        }
-        
-        SQLUINTEGER transactionIsolationOption;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_TXN_ISOLATION_OPTION, &transactionIsolationOption, sizeof(SQLUINTEGER), &outlen))) {
-            ob_set_n(status, "transactionIsolationOption", transactionIsolationOption);
-        }
-        
-        SQLCHAR integrity[2];
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_INTEGRITY, integrity, sizeof(integrity), &outlen))) {
-            ob_set_s(status, "integrity", (const char *)integrity);
-        }
-        
-        SQLUINTEGER getdataExtensions;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_GETDATA_EXTENSIONS, &getdataExtensions, sizeof(SQLUINTEGER), &outlen))) {
-            ob_set_n(status, "getdataExtensions", getdataExtensions);
-        }
-        
         SQLUSMALLINT nullCollation;
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_NULL_COLLATION, &nullCollation, sizeof(SQLUSMALLINT), &outlen))) {
             ob_set_n(status, "nullCollation", nullCollation);
-        }
-        
-        SQLCHAR orderByColumnsInSelect[2];
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_ORDER_BY_COLUMNS_IN_SELECT, orderByColumnsInSelect, sizeof(orderByColumnsInSelect), &outlen))) {
-            ob_set_s(status, "orderByColumnsInSelect", (const char *)orderByColumnsInSelect);
-        }
-        
-        SQLCHAR specialCharacters[1024];
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_SPECIAL_CHARACTERS, specialCharacters, sizeof(specialCharacters), &outlen))) {
-            ob_set_s(status, "specialCharacters", (const char *)specialCharacters);
         }
         
         SQLUSMALLINT maximumColumnsInGroupBy;
@@ -294,21 +262,6 @@ static void SQLGetInfo(PA_PluginParameters params) {
             ob_set_n(status, "maximumColumnsInTable", maximumColumnsInTable);
         }
         
-        SQLUINTEGER maximumIndexSize;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_INDEX_SIZE, &maximumIndexSize, sizeof(SQLUINTEGER), &outlen))) {
-            ob_set_n(status, "maximumIndexSize", maximumIndexSize);
-        }
-
-        SQLUINTEGER maximumRowSize;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_ROW_SIZE, &maximumRowSize, sizeof(SQLUINTEGER), &outlen))) {
-            ob_set_n(status, "maximumRowSize", maximumRowSize);
-        }
-        
-        SQLUINTEGER maximumStatementLength;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_STATEMENT_LEN, &maximumStatementLength, sizeof(SQLUINTEGER), &outlen))) {
-            ob_set_n(status, "maximumStatementLength", maximumStatementLength);
-        }
-        
         SQLUSMALLINT maximumTablesInSelect;
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_TABLES_IN_SELECT, &maximumTablesInSelect, sizeof(SQLUSMALLINT), &outlen))) {
             ob_set_n(status, "maximumTablesInSelect", maximumTablesInSelect);
@@ -319,15 +272,73 @@ static void SQLGetInfo(PA_PluginParameters params) {
             ob_set_n(status, "maximumUserNameLength", maximumUserNameLength);
         }
         
+        SQLUSMALLINT maximumCatalogNameLength;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_CATALOG_NAME_LEN, &maximumCatalogNameLength, sizeof(SQLUSMALLINT), &outlen))) {
+            ob_set_n(status, "maximumCatalogNameLength", maximumCatalogNameLength);
+        }
+        
+        SQLUSMALLINT maximumTableNameLength;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_TABLE_NAME_LEN, &maximumTableNameLength, sizeof(SQLUSMALLINT), &outlen))) {
+            ob_set_n(status, "maximumTableNameLength", maximumTableNameLength);
+        }
+        
+        SQLUSMALLINT transactionCapable;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_TXN_CAPABLE, &transactionCapable, sizeof(SQLUSMALLINT), &outlen))) {
+            ob_set_n(status, "transactionCapable", transactionCapable);
+        }
+        
+#pragma mark SQLINTEGER
+        
+        SQLINTEGER fetchDirection;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_FETCH_DIRECTION, &fetchDirection, sizeof(SQLINTEGER), &outlen))) {
+            ob_set_n(status, "fetchDirection", fetchDirection);
+        }
+        
+        SQLINTEGER scrollConcurrency;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_SCROLL_CONCURRENCY, &scrollConcurrency, sizeof(SQLINTEGER), &outlen))) {
+            ob_set_n(status, "scrollConcurrency", scrollConcurrency);
+        }
+        
+#pragma mark SQLUINTEGER
+        
+        SQLUINTEGER alterTable;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_ALTER_TABLE, &alterTable, sizeof(SQLUINTEGER), &outlen))) {
+            ob_set_n(status, "alterTable", alterTable);
+        }
+        
+        SQLUINTEGER defaultTransactionIsolation;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_DEFAULT_TXN_ISOLATION, &defaultTransactionIsolation, sizeof(SQLUINTEGER), &outlen))) {
+            ob_set_n(status, "defaultTransactionIsolation", defaultTransactionIsolation);
+        }
+        
+        SQLUINTEGER transactionIsolationOption;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_TXN_ISOLATION_OPTION, &transactionIsolationOption, sizeof(SQLUINTEGER), &outlen))) {
+            ob_set_n(status, "transactionIsolationOption", transactionIsolationOption);
+        }
+        
+        SQLUINTEGER getdataExtensions;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_GETDATA_EXTENSIONS, &getdataExtensions, sizeof(SQLUINTEGER), &outlen))) {
+            ob_set_n(status, "getdataExtensions", getdataExtensions);
+        }
+        
+        SQLUINTEGER maximumIndexSize;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_INDEX_SIZE, &maximumIndexSize, sizeof(SQLUINTEGER), &outlen))) {
+            ob_set_n(status, "maximumIndexSize", maximumIndexSize);
+        }
+        
+        SQLUINTEGER maximumRowSize;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_ROW_SIZE, &maximumRowSize, sizeof(SQLUINTEGER), &outlen))) {
+            ob_set_n(status, "maximumRowSize", maximumRowSize);
+        }
+        
+        SQLUINTEGER maximumStatementLength;
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_STATEMENT_LEN, &maximumStatementLength, sizeof(SQLUINTEGER), &outlen))) {
+            ob_set_n(status, "maximumStatementLength", maximumStatementLength);
+        }
+        
         SQLUINTEGER outerJoinCapabilites;
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_OJ_CAPABILITIES, &outerJoinCapabilites, sizeof(SQLUINTEGER), &outlen))) {
             ob_set_n(status, "outerJoinCapabilites", outerJoinCapabilites);
-        }
-        
-        
-        SQLCHAR xopenCLIYear[1024];
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_XOPEN_CLI_YEAR, xopenCLIYear, sizeof(xopenCLIYear), &outlen))) {
-            ob_set_s(status, "xopenCLIYear", (const char *)xopenCLIYear);
         }
         
         SQLUINTEGER cursorSensitivity;
@@ -335,11 +346,6 @@ static void SQLGetInfo(PA_PluginParameters params) {
             ob_set_n(status, "cursorSensitivity", cursorSensitivity);
         }
         
-        SQLCHAR describeParameter[2];
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_DESCRIBE_PARAMETER, describeParameter, sizeof(describeParameter), &outlen))) {
-            ob_set_s(status, "describeParameter", (const char *)describeParameter);
-        }
-                
         SQLUINTEGER maximumIdentifierLength;
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_IDENTIFIER_LEN, &maximumIdentifierLength, sizeof(SQLUINTEGER), &outlen))) {
             ob_set_n(status, "maximumIdentifierLength", maximumIdentifierLength);
