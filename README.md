@@ -7,7 +7,7 @@
 
 alternative to `ODBC_SQLGetInfo` ([`SQLGetInfo`](https://learn.microsoft.com/en-us/sql/odbc/reference/syntax/sqlgetinfo-function?view=sql-server-ver17))
 
-|type|property|note|
+|type|property|value|
 |-|-|-|
 |SQL_ACTIVE_CONNECTIONS|maximumDriverConnections|0
 |SQL_ACTIVE_STATEMENTS|maximumConcurrentActivities|1
