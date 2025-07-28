@@ -32,7 +32,7 @@ alternative to `ODBC_SQLGetInfo` ([`SQLGetInfo`](https://learn.microsoft.com/en-
 |SQL_DATA_SOURCE_NAME|dataSourceName|
 |SQL_DATA_SOURCE_READ_ONLY|dataSourceReadOnly|
 |SQL_DBMS_NAME|dbmsName|
-|SQL_DBMS_VER|dbmsVer|
+|SQL_DBMS_VER|dbmsVersion|
 |SQL_DEFAULT_TXN_ISOLATION|defaultTransactionIsolation|
 |SQL_DESCRIBE_PARAMETER|describeParameter|
 |SQL_FETCH_DIRECTION|fetchDirection|
