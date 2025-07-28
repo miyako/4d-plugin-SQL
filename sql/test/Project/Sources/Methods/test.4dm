@@ -5,6 +5,13 @@ SET TEXT TO PASTEBOARD:C523(JSON Stringify:C1217($status; *))
 /*
 {
 "success": true,
+"databaseName": "mydb",
+"driverName": "psqlodbcw.so",
+"driverVersion": "17.00.0006",
+"ODBCVersion": "03.52",
+"driverManagerVersion": "N",
+"databaseManagementSystemVersion": "14.0.18",
+"databaseManagementSystemName": "PostgreSQL",
 "accessibleProcedures": "N",
 "accessibleTables": "N",
 "alterTable": 490539,
@@ -18,7 +25,7 @@ SET TEXT TO PASTEBOARD:C523(JSON Stringify:C1217($status; *))
 "serverName": "localhost",
 "searchPatternEscape": "\\",
 "dbmsName": "PostgreSQL",
-"dbmsVer": "14.0.18",
+"dbmsVersion": "14.0.18",
 "cursorCommitBehavior": 2,
 "dataSourceReadOnly": "N",
 "defaultTransactionIsolation": 2,
@@ -40,7 +47,6 @@ SET TEXT TO PASTEBOARD:C523(JSON Stringify:C1217($status; *))
 "maximumColumnsInGroupBy": 0,
 "maximumColumnsInIndex": 0,
 "maximumColumnsInOrderBy": 0,
-"maximumColumnsinGroupBy": 0,
 "maximumColumnsInSelect": 0,
 "maximumColumnsInTable": 0,
 "maximumIndexSize": 0,
@@ -51,7 +57,7 @@ SET TEXT TO PASTEBOARD:C523(JSON Stringify:C1217($status; *))
 "outerJoinCapabilites": 127,
 "xopenCLIYear": "1995",
 "describeParameter": "N",
-"maximumIdentifierLength": 5177407
+"maximumIdentifierLength": 63
 }
 */
 

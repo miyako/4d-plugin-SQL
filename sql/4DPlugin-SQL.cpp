@@ -74,6 +74,41 @@ static void SQLGetInfo(PA_PluginParameters params) {
         SQLHDBC hdbc = backend->hdbc_;
         
         SQLSMALLINT outlen;
+
+        SQLCHAR databaseName[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, 16, databaseName, sizeof(databaseName), &outlen))) {
+            ob_set_s(status, "databaseName", (const char *)databaseName);
+        }
+
+        SQLCHAR driverName[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, 6, driverName, sizeof(driverName), &outlen))) {
+            ob_set_s(status, "driverName", (const char *)driverName);
+        }
+        
+        SQLCHAR driverVer[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, 7, driverVer, sizeof(driverVer), &outlen))) {
+            ob_set_s(status, "driverVersion", (const char *)driverVer);
+        }
+
+        SQLCHAR ODBCVer[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, 10, ODBCVer, sizeof(ODBCVer), &outlen))) {
+            ob_set_s(status, "ODBCVersion", (const char *)ODBCVer);
+        }
+
+        SQLCHAR DMVer[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, 19, DMVer, sizeof(DMVer), &outlen))) {
+            ob_set_s(status, "driverManagerVersion", (const char *)DMVer);
+        }
+        
+        SQLCHAR DBMSVer[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, 18, DBMSVer, sizeof(DBMSVer), &outlen))) {
+            ob_set_s(status, "databaseManagementSystemVersion", (const char *)DBMSVer);
+        }
+        
+        SQLCHAR DBMSName[1024];
+        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, 17, DBMSName, sizeof(DBMSName), &outlen))) {
+            ob_set_s(status, "databaseManagementSystemName", (const char *)DBMSName);
+        }
         
         SQLCHAR accessibleProcedures[2];
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_ACCESSIBLE_PROCEDURES, accessibleProcedures, sizeof(accessibleProcedures), &outlen))) {
@@ -144,16 +179,6 @@ static void SQLGetInfo(PA_PluginParameters params) {
             ob_set_s(status, "searchPatternEscape", (const char *)searchPatternEscape);
         }
         
-        SQLCHAR dbmsName[1024];
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_DBMS_NAME, dbmsName, sizeof(dbmsName), &outlen))) {
-            ob_set_s(status, "dbmsName", (const char *)dbmsName);
-        }
-
-        SQLCHAR dbmsVer[1024];
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_DBMS_VER, dbmsVer, sizeof(dbmsVer), &outlen))) {
-            ob_set_s(status, "dbmsVer", (const char *)dbmsVer);
-        }
-
         SQLUSMALLINT cursorCommitBehavior;
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_CURSOR_COMMIT_BEHAVIOR, &cursorCommitBehavior, sizeof(SQLUSMALLINT), &outlen))) {
             ob_set_n(status, "cursorCommitBehavior", cursorCommitBehavior);
@@ -257,11 +282,6 @@ static void SQLGetInfo(PA_PluginParameters params) {
         SQLUSMALLINT maximumColumnsInOrderBy;
         if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_ORDER_BY, &maximumColumnsInOrderBy, sizeof(SQLUSMALLINT), &outlen))) {
             ob_set_n(status, "maximumColumnsInOrderBy", maximumColumnsInOrderBy);
-        }
-        
-        SQLUSMALLINT maximumColumnsinGroupBy;
-        if (SQL_SUCCEEDED(SQLGetInfo(hdbc, SQL_MAX_COLUMNS_IN_GROUP_BY, &maximumColumnsinGroupBy, sizeof(SQLUSMALLINT), &outlen))) {
-            ob_set_n(status, "maximumColumnsinGroupBy", maximumColumnsinGroupBy);
         }
         
         SQLUSMALLINT maximumColumnsInSelect;
