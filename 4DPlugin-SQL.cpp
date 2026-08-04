@@ -360,6 +360,9 @@ static void SQLGetInfo(PA_PluginParameters params) {
     } catch (const std::exception& e) {
         ob_set_s(status, "errorMessage", e.what());
         ob_set_b(status, L"success", false);
+    } catch (...) {
+        ob_set_s(status, "errorMessage", "unknown error");
+        ob_set_b(status, L"success", false);
     }
     PA_ReturnObject(params, status);
 }
